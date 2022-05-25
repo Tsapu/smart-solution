@@ -1,0 +1,19 @@
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+
+PUD_RES = 13
+BUTTON = 11
+
+
+def setup():
+	# Set up the button input pin, will be used with a pull-down resistor, setting it to low will automatically set it as a listener
+	GPIO.setup(BUTTON, GPIO.IN)
+	GPIO.add_event_detect(BUTTON, GPIO.RISING, callback=button_handler, bouncetime=300)
+
+	# Set up the pulldown resistor pin for the button
+	GPIO.setup(PUD_RES, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+	ws = websocket.WebSocket()
+	ws.connect(ws_url)
+
+	return ws
