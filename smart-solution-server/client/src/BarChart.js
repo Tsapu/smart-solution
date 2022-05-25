@@ -8,9 +8,7 @@ import React from 'react'
 
 export default function BarChart({height, color}) {
 
-
-	
-	return (
+  return (
 		<BarChartContainer>
         <MakeBar height={height} color={color} />
     </BarChartContainer>

@@ -16,10 +16,8 @@ int val_4 = 40;
 
 void setup() {
   // put your setup code here, to run once:
-  // pinMode(knob_1, INPUT); pinMode(knob_2, INPUT); pinMode(knob_3, INPUT); pinMode(knob_4, INPUT);
   pinMode(BTN, INPUT);
   Serial.begin(115200);
-  //Serial2.begin(115200);
 }
 
 void loop() {
@@ -40,7 +38,6 @@ void loop() {
 //       Serial.read();
 //    }
     data_ = String(val_1) + " " + String(val_2) + " " + String(val_3) + " " + String(val_4);
-    //Serial2.println(data_);
     Serial.println(data_);
 ///
 

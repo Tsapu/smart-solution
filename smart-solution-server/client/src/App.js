@@ -26,12 +26,11 @@ const config = {
 }
 
 
-
 export default function App() {
 
   const [data, setData] = useState({one: 25, two: 25, three: 25, four: 25});
   const [laser, activateLaser] = useState(false);
-	const [ws, setWs] = useState(new WebSocket(`ws://localhost:5000/subscribe`)); // "ws://localhost:5000/subscribe"`ws://localhost:3000/subscribe`
+	const [ws, setWs] = useState(new WebSocket(`wss://adwinthief.com/subscribe`)); // "ws://localhost:5000/subscribe"`ws://localhost:3000/subscribe`
   const [muted, setMute] = useState(true);
   const [samples, setSamples] = useState(["garage1", "guitar1", "bass1", "house1"]);
 
@@ -41,12 +40,6 @@ export default function App() {
       activateLaser(false);
     }, "1300")
   }
-
-  function generateDrop() {
-    const dropList = [];
-      for (var i = 0; i < 4; i++) {
-        dropList.push(<Selector index={i} select={setItem}></Selector>)
-  }}
 
   const setItem = (index, key) => {
     console.log(index, key)
