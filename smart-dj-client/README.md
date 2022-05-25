@@ -1,1 +1,1 @@
-For collecting potentiometer data
+For collecting potentiometer data and sending it to the remote server via WebSocket connection
