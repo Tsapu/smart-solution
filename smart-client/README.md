@@ -1,1 +1,1 @@
-This was made just for testing the endpoint, before connecting the potentiometers
+This app contains four sliders and a button made just for testing the endpoint, before connecting the physical potentiometers and button
